@@ -1,0 +1,210 @@
+:root {
+    --primary-color: rgba(77, 166, 255, 1);
+    --secondary-color: rgb(255, 255, 255);
+    --seco-color: #3655B3;
+    --headings-font-family: Bebas Neue;
+    --paragraph-font: Muli;
+    --base-font-size: 16px;
+    --line-height: 1.5;
+    --paragraph-padd: 5px;
+    --nargin-z: 0px;
+    --section-padding: 120px 10px 80px 10px;
+    --paragraph-color: #858585;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    color: var(--secondary-color);
+    font-size: var(--base-font-size);
+    font-family: var(--paragraph-font);
+    line-height: var(--line-height);
+    overflow-x: hidden;
+}
+
+.top-nav {
+    background: rgba(77, 166, 255, 1);
+    line-height: var(--line-height);
+    padding: var(--paragraph-padd);
+}
+
+.top-nav .panel {
+    background: var(--bs-blue);
+    .left {
+        background: var(--primary-color);
+        line-height: var(--line-height);
+        padding: var(--paragraph-padd);
+        .right {
+            float: right;
+            line-height: var(--line-height);
+            padding: var(--paragraph-padd);
+            justify-content: space-between;
+            p {
+                color: #fff;
+                a {
+                    color: #fff !important;
+                     :first-child a:not([href]),
+                     :first-child a:not([href]):hover {
+                        color: #ffffff;
+                        font-size: var(--base-font-size);
+                        line-height: var(--line-height);
+                        margin: var(--nargin-z) !important;
+                        font-family: var(--paragraph-font);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.top-nav:first-child a:not([href]),
+.top-nav:first-child a:not([href]):hover {
+    color: var(--secondary-color);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height);
+    margin: var(--nargin-z) !important;
+    font-family: var(--paragraph-font);
+}
+
+p {
+    color: var(--secondary-color);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height);
+    padding: var( --paragraph-padd);
+    margin: var(--nargin-z) !important;
+    font-family: var(--paragraph-font);
+}
+
+h1 {
+    font-family: var(--headings-font-family);
+}
+
+h2 {
+    font-family: var(--headings-font-family);
+    color: #3D75F2;
+    position: relative;
+    z-index: 2;
+}
+
+h3 {
+    font-family: var(--headings-font-family);
+    color: #3D75F2;
+    font-size: 23px;
+    z-index: 2;
+}
+
+.logo {
+    padding: 5px;
+    line-height: 40px;
+}
+
+.logo a {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.logo a span {
+    color: #ffc75f;
+}
+
+img {
+    width: 100%;
+}
+
+h4 {
+    font-family: var(--headings-font-family);
+    color: var(--secondary-color);
+    z-index: 2;
+    margin: 0px;
+}
+
+.subscriptionPlan,
+.login {
+    background: var(--secondary-color);
+    color: var(--seco-color) !important;
+    height: 45px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+header {
+    box-shadow: 5px -2px 7px #ccc;
+    display: flex;
+    position: sticky;
+    top: 0px !important;
+    z-index: 30;
+    background: #008ffb;
+    display: flex;
+}
+
+.navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+}
+
+nav ul li {
+    line-height: var(--line-height);
+    padding: 0px 14px;
+    margin: var(--nargin-z) !important;
+    font-family: var(--paragraph-font);
+    position: relative;
+}
+
+nav ul li a {
+    color: hsla(0, 0%, 100%, .8);
+    ;
+    text-decoration: none;
+    text-transform: initial;
+    line-height: 50px;
+    padding: var( --paragraph-padd);
+}
+
+nav ul li a:hover {
+    position: relative;
+    color: var(--primary-color);
+}
+
+nav ul li a::after {
+    content: '';
+    top: 50px;
+    position: relative;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+nav ul li .active {
+    color: var(--primary-color);
+    left: 11px;
+    height: 5px;
+}
+
+nav ul li .active::after {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    position: absolute;
+    top: 85px;
+    content: '';
+    left: 10px;
+    height: 5px;
+    width: 70%;
+}
+
+
+/* Header---------------------End-------------- */

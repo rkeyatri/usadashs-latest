@@ -1,0 +1,113 @@
+<div id="search">
+
+    <div class='search-form'>
+        <div class="col-lg-12">
+            <div class="search-wrapper justify-content-center">
+                <h5 class="card-header">Search us import data with</h5>
+                <div class="align-items-center justify-content-center">
+                    <div class="search pt-2">
+                        <form class="form" [formGroup]="searchForm" (ngSubmit)="onDataSearch(searchForm)">
+
+                            <div class="row px-3">
+                                <div class="col-lg-1 col-sm-2">
+                                    <div class="input-group">
+                                        <select class="form-control" id="datatype-field" formControlName="mode"> 
+                            <option value="">Select Type</option>
+                            <option value="imports">Import</option> 
+                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-2">
+                                    <div class="input-group input-group-inverse">
+                                        <select id="month-field" class="form-control fill" formControlName="fromdate">
+                                                <option value="">Select Month</option>
+                                                <option value="012020">January</option>
+                                                <option value="022020">February</option>
+                                                <option value="032020">March</option>
+                                                <option value="042020">April</option>
+                                                <option value="052020">May</option>
+                                                <option value="062020">June</option>
+                                                <option value="072020">July</option>
+                                                <option value="082020">August</option>
+                                                <option value="092020">September</option>
+                                                <option value="102020">October</option>
+                                                <option value="112020">November</option>
+                                                <option value="122020">December</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-2">
+                                    <div class="input-group input-group-inverse">
+                                        <select id="month-field" class="form-control fill" formControlName="todate">
+                                                <option value="">Select Month</option>
+                                                <option value="012020">January</option>
+                                                <option value="022020">February</option>
+                                                <option value="032020">March</option>
+                                                <option value="042020">April</option>
+                                                <option value="052020">May</option>
+                                                <option value="062020">June</option>
+                                                <option value="072020">July</option>
+                                                <option value="082020">August</option>
+                                                <option value="092020">September</option>
+                                                <option value="102020">October</option>
+                                                <option value="112020">November</option>
+                                                <option value="122020">December</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-2">
+                                    <div class="input-group input-group-inverse">
+                                        <select id="month-field" class="form-control fill" formControlName="year">
+                                                <option value="">Select Month</option>
+                                                <option value="2020">2020</option> 
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3">
+                                    <div class="input-group input-group-inverse">
+                                        <input type="text" formControlName="product" class="form-control" placeholder="Product" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-1 col-sm-2">
+                                    <div class="input-group input-group-inverse">
+                                        <input type="text" formControlName="hscode" class="form-control" placeholder="Hs Code" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-1 col-sm-3">
+                                    <div class="input-group input-group-inverse">
+                                        <input type="text" formControlName="port" class="form-control" placeholder="Port" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-3">
+                                    <div class="input-group input-group-inverse">
+                                        <input type="text" formControlName="importer" class="form-control" placeholder="Importer" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-3">
+                                    <div class="input-group input-group-inverse">
+                                        <input type="text" formControlName="exporter" class="form-control" placeholder="Exporter" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-3">
+                                    <div class="input-group input-group-inverse">
+                                        <input type="text" formControlName="country" class="form-control" placeholder="Country" />
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-2 col-sm-3">
+                                    <div class="input-group input-group-inverse">
+                                        <input type="text" formControlName="unit" class="form-control" placeholder="Unit" />
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <button type="submit">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

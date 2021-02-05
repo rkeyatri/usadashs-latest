@@ -1,0 +1,17 @@
+<table class="table table-fixed" *ngIf="records" width="100%">
+    <thead fix-head>
+        <tr>
+            <!-- Default unchecked -->
+
+            <!-- <th><input type="checkbox" [(ngModel)]="selectedAll" (change)="selectAll();"/></th>  -->
+            <th *ngFor="let map of columnMaps"> {{ map.header }}</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let record of records">
+            <td><input type="checkbox" value=""></td>
+            <td *ngFor="let map of columnMaps">{{ record[map.key] }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,191 @@
+@import '../../sass/variables';
+.login-container {
+    color: $white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        content: " ";
+        background-color: #4680ff;
+    }
+    .button,
+    button,
+    input[type='button'],
+    input[type='reset'],
+    input[type='submit'] {
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        border-radius: 3px;
+        color: $white;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 25px;
+        justify-content: center;
+        margin: auto;
+        width: 100% !important;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
+        transition: 0.3s;
+        &:focus,
+        &:hover,
+        &.active {
+            background-color: $color-primary;
+            border: 1px solid $color-primary;
+            color: $white;
+            outline: 0;
+        }
+        &[disabled] {
+            cursor: default;
+            opacity: .5;
+            &:focus,
+            &:hover {
+                background-color: $color-primary;
+                border-color: $color-primary;
+            }
+        }
+        &.button-outline {
+            background-color: transparent;
+            color: $color-primary;
+            &:focus,
+            &:hover,
+            &.active {
+                background-color: transparent;
+                border-color: $color-secondary;
+                color: $color-secondary;
+            }
+            &[disabled] {
+                &:focus,
+                &:hover {
+                    border-color: inherit;
+                    color: $color-primary;
+                }
+            }
+        }
+        &.button-clear {
+            background-color: transparent;
+            border-color: transparent;
+            color: $color-primary;
+            &:focus,
+            &:hover,
+            &.active {
+                background-color: transparent;
+                border-color: transparent;
+                color: $color-secondary;
+            }
+            &[disabled] {
+                &:focus,
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+    .login-box {
+        display: block;
+        position: relative;
+        padding: 0 35px 50px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin: auto;
+        background-position: 15% 50%;
+        background-size: 280% auto;
+        background-repeat: no-repeat;
+        min-width: 300px;
+        max-width: 375px;
+        width: 90%;
+        box-shadow: 0 0 10px rgba(243, 243, 243, 0.6);
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            content: " ";
+            background-color: #ffffff;
+        }
+        form {
+            position: relative;
+            img {
+                padding: 10px 0px 10px;
+                width: 45%;
+                display: block;
+                justify-content: center;
+                text-align: center;
+                margin: auto;
+            }
+        }
+    }
+    h1.site-name {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 30px;
+        text-align: center;
+        padding: 20px 0 15px;
+        margin: 0 -35px 15px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-bottom: 10px solid rgba(0, 0, 0, 0.5);
+        em {
+            font-style: italic;
+            font-weight: 600;
+        }
+        small {
+            font-size: 0.5em;
+        }
+    }
+    h2 {
+        font-size: 30px;
+        font-weight: 300;
+        margin: 0 0 15px;
+    }
+    .form-group {
+        margin: 0 0 20px;
+        input.form-control {
+            border: none;
+            border-bottom: 1px solid #ced4da;
+            background: no-repeat bottom, 50% calc(100% - 1px);
+            background-size: 0 100%, 100% 100%;
+            -webkit-transition: background 0s ease-out;
+            transition: background 0s ease-out;
+            &:focus {
+                border-bottom-color: transparent;
+                background-size: 100% 100%, 100% 100%;
+                -webkit-transition-duration: .3s;
+                transition-duration: .3s;
+                box-shadow: none;
+                background-image: linear-gradient( 0deg, #4680ff 2px, rgba(70, 128, 255, 0) 0), linear-gradient( 0deg, #ced4da 1px, rgba(206, 212, 218, 0) 0);
+            }
+            &::placeholder {
+                color: $color-dark;
+                opacity: 0.4;
+            }
+        }
+        a {
+            color: $color-dark;
+            font-size: 12px;
+        }
+        .fp-link {
+            line-height: 25px;
+            display: block;
+        }
+    }
+}

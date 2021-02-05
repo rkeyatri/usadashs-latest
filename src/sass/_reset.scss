@@ -1,0 +1,117 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; 
+    box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block; 
+}
+ol, ul {
+    list-style: none; 
+}
+blockquote, q {
+    quotes: none; 
+}
+blockquote {
+    &:before, &:after {
+        content: '';
+        content: none; 
+    }
+}
+
+q {
+    &:before, &:after {
+        content: '';
+        content: none;
+    }
+}
+.input-group {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+.input-group span {
+    cursor: pointer;
+}
+.input-group-prepend {
+    margin-right: -1px;
+}
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle), .input-group>.input-group-append:last-child>.input-group-text:not(:last-child), .input-group>.input-group-append:not(:last-child)>.btn, .input-group>.input-group-append:not(:last-child)>.input-group-text, .input-group>.input-group-prepend>.btn, .input-group>.input-group-prepend>.input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group-inverse .input-group-append .input-group-text, .input-group-inverse .input-group-prepend .input-group-text {
+    background-color: #37474f;
+}
+.input-group-append .input-group-text, .input-group-prepend .input-group-text {
+    background-color: #4099ff;
+    border-color: rgba(0,0,0,.15);
+    color: #fff;
+}
+
+ 
+ 
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle), .input-group>.input-group-append:last-child>.input-group-text:not(:last-child), .input-group>.input-group-append:not(:last-child)>.btn, .input-group>.input-group-append:not(:last-child)>.input-group-text, .input-group>.input-group-prepend>.btn, .input-group>.input-group-prepend>.input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group-inverse .input-group-append .input-group-text, .input-group-inverse .input-group-prepend .input-group-text {
+    background-color: #37474f;
+}
+.input-group-append .input-group-text, .input-group-prepend .input-group-text {
+    background-color: #4099ff;
+    border-color: rgba(0,0,0,.15);
+    color: #fff;
+}
+.input-group, select {
+    margin-bottom: 1.25em;
+}
+
+.input-group-text {
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+.input-group-inverse .form-control {
+    border-color: #37474f;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+ 
+table {
+    border-collapse: collapse;
+    border-spacing: 0; 
+}
+[hidden] {
+    display: none;
+}

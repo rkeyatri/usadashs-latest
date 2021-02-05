@@ -1,0 +1,5 @@
+<div *ngFor="let alert of alerts" class="alert-message {{ alert.alertType }}">
+    <i class="fa fa-{{ alert.alertIcon }}"></i>
+    <p class="message">{{ alert.message }}</p>
+    <a *ngIf="alert" class="alert-x" (click)="removeAlert(alert)" href="javascript:void(0);" title="close">&times;</a>
+</div>

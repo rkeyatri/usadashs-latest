@@ -1,0 +1,403 @@
+@import 'variables';
+@import 'reset';
+body {
+    font-size: 13px;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    font-family: 'Assistant', sans-serif;
+    font-variant-numeric: lining-nums;
+    background: #f2f7fb !important;
+}
+
+b,
+strong {
+    font-weight: 600;
+}
+
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+    margin-bottom: 0 0 15px;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+h5 {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.cf {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    border-radius: 3px;
+    color: $white;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 25px;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: 0.3s;
+    &:focus,
+    &:hover,
+    &.active {
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        color: $white;
+        outline: 0;
+    }
+    &[disabled] {
+        cursor: default;
+        opacity: .5;
+        &:focus,
+        &:hover {
+            background-color: $color-primary;
+            border-color: $color-primary;
+        }
+    }
+    &.button-outline {
+        background-color: transparent;
+        color: $color-primary;
+        &:focus,
+        &:hover,
+        &.active {
+            background-color: transparent;
+            border-color: $color-secondary;
+            color: $color-secondary;
+        }
+        &[disabled] {
+            &:focus,
+            &:hover {
+                border-color: inherit;
+                color: $color-primary;
+            }
+        }
+    }
+    &.button-clear {
+        background-color: transparent;
+        border-color: transparent;
+        color: $color-secondary;
+        &:focus,
+        &:hover,
+        &.active {
+            background-color: transparent;
+            border-color: transparent;
+            color: $color-primary;
+        }
+        &[disabled] {
+            &:focus,
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+button,
+.button {
+    &.loading {
+        position: relative;
+        padding-right: 40px;
+        &:after {
+            animation: rotation 2s infinite linear;
+            -webkit-animation: rotation 2s infinite linear;
+            content: " ";
+            width: 14px;
+            height: 14px;
+            border-width: 4px;
+            border-style: solid;
+            border-color: #cccccc #ffffff #ffffff #FFFFFF;
+            display: block;
+            overflow: hidden;
+            right: 10px;
+            opacity: 0.7;
+            top: 50%;
+            position: absolute;
+            margin-top: -11px;
+            border-radius: 50%;
+        }
+    }
+    &.min {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        margin: 0 1px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+    }
+}
+
+.checkbox {
+    position: relative;
+    input {
+        position: absolute;
+        opacity: 0;
+        &:checked~label:before {
+            background-color: $white;
+            box-shadow: 0 0 0 3px $color-primary inset;
+        }
+    }
+    label {
+        padding-left: 25px;
+        display: block;
+        cursor: pointer;
+        line-height: 25px;
+        &:before {
+            border: 1px solid $white;
+            content: " ";
+            width: 12px;
+            height: 12px;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -7px;
+        }
+    }
+}
+
+.row {
+    margin: 0 -5px;
+    .col {
+        box-sizing: border-box;
+        float: left;
+        padding: 0 5px;
+        min-height: 2px;
+        @for $i from 1 to 13 {
+            &.col-#{$i} {
+                width: #{ (100% / 12) *  $i}
+            }
+        }
+        &.col-2-5 {
+            width: 20%;
+        }
+        &.col-9-5 {
+            width: 80%;
+        }
+    }
+    &.gap-20 {
+        margin: 0 -10px;
+        .col {
+            padding: 0 10px;
+        }
+    }
+    &.gap-50 {
+        margin: 0 -25px;
+        .col {
+            padding: 0 25px;
+        }
+    }
+    .nogap {
+        margin: 0;
+        .col {
+            padding: 0;
+        }
+    }
+}
+
+.pcoded-inner-content {
+    padding: 17px 25px;
+    margin-top: 29px;
+}
+
+.panel {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    margin-bottom: 15px;
+    background-color: #fff;
+    background-clip: border-box;
+    box-shadow: 0 1px 2px 0px rgba(43, 43, 43, 0.1), 0 11px 6px -7px rgba(43, 43, 43, 0.1);
+    border: none;
+    border-radius: .25rem;
+    .panel-header {
+        padding: 5px 14px;
+        font-weight: 600;
+        font-size: 18px;
+        background-color: #000;
+        color: #fff;
+    }
+    .panel-inner {
+        padding: 1.25rem;
+    }
+}
+
+.field-box {
+    margin: 0 0 15px;
+    label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0 0 5px;
+    }
+}
+
+.select.form-control:not([size]):not([multiple]) {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    border-color: #37474f;
+}
+
+select.form-control,
+select.form-control:focus,
+select.form-control:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #37474f;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+    tr {
+        border-left: 1px solid $color-quinary;
+        border-right: 1px solid $color-quinary;
+    }
+    tr:nth-of-type(2n) {
+        background: #ddeeff !important;
+    }
+    td,
+    th {
+        border-bottom: 1px solid $color-tertiary;
+        padding: 12px 40px;
+        line-height: 13px;
+        padding-right: 10px;
+        border: 1PX solid #cccccc;
+        text-align: left;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    th {
+        font-weight: 600;
+        background: #12298e;
+        color: #fff;
+        white-space: nowrap;
+        font-size: 16px;
+        text-transform: capitalize;
+        line-height: 25px;
+        padding: 10px;
+    }
+    td {
+        padding: 8px;
+        line-height: 1.42857143;
+        WHITE-SPACE: NOWRAP;
+        font-size: 13px;
+        vertical-align: top;
+        font-weight: 300;
+        border-top: 1px solid #ddd;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.lower {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}

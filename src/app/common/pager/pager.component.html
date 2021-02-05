@@ -1,0 +1,15 @@
+<div class="pagination cf" *ngIf="count > 0">
+    <div class="col-md-12">
+        <div class="description left">
+            Total Shipments : <b>{{ count }} </b>
+            <!-- <span class="page-counts pl-4">{{ getMin() }} - {{ getMax() }} </span> -->
+        </div>
+        <div class="numbers right">
+            <span class="page-counts pl-4">{{ getMin() }} - {{ getMax() }}  of Total {{ count }} </span>
+            <button class="link button-clear min" (click)="onPrev()" [disabled]="page === 1 || loading" [ngClass]="{ 'disabled': page === 1 || loading }">&lt;</button>
+            <button *ngFor="let pageNum of getPages()" (click)="onPage(pageNum)" [ngClass]="{'active': pageNum === page, 'disabled': loading}" class="button-clear min">{{ pageNum }}</button>
+
+            <button class="link button-clear min" (click)="onNext(true)" [disabled]="lastPage() || loading" [ngClass]="{ 'disabled': lastPage() || loading }">&gt;</button>
+        </div>
+    </div>
+</div>

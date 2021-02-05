@@ -1,0 +1,43 @@
+@import '../../../sass/variables';
+.nav-tabs {
+    border-bottom: 0px solid #ddd;
+    z-index: 20;
+    li {
+        border: 0px;
+        padding: 5px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        background: #ffb01b;
+        border-radius: 0px;
+        border-top-right-radius: 80px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0px;
+        margin-right: 8px;
+        line-height: 20px;
+        a {
+            outline: none;
+            font-size: 15px;
+            text-transform: uppercase;
+            display: block;
+            text-decoration: none;
+            color: $white;
+            padding: 2px 19px 2px 2px;
+            letter-spacing: 0.01em;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        &.active,
+        &:hover {
+            border-top-right-radius: 80px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 0px;
+            background-color: $white;
+            top: 0;
+            border-bottom: 2px solid $color-primary;
+            a {
+                color: $color-primary;
+            }
+        }
+    }
+}
